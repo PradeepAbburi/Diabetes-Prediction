@@ -1,0 +1,139 @@
+/* General styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to bottom, #2c2c2c, #1c1c1c);
+    margin: 0;
+    padding: 20px;
+    color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Result container styling */
+.result {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Result success styling (green for non-diabetic) */
+.result.success {
+    background-color: #313a31; /* dark green-gray */
+    color: #81c784;          /* light green */
+    border: 1px solid #4caf50;
+}
+
+/* Result error styling (red for diabetic) */
+.result.error {
+    background-color: #3a3131; /* dark red-gray */
+    color: #e57373;          /* light red */
+    border: 1px solid #f44336;
+}
+
+/* Form container styling */
+form {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 25px 20px;
+    background: #2c2c2c; /* dark gray */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-out;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #1c1c1c; /* dark background for inputs */
+    color: #f5f5f5;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #81c784;
+    outline: none;
+    box-shadow: 0 0 8px rgba(129, 199, 132, 0.6);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #555555, #444444);
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #666666, #555555);
+}
+
+/* Add animation effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    label, input {
+        font-size: 14px;
+    }
+}
